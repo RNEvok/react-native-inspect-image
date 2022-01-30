@@ -1,4 +1,4 @@
-# React Native Strobe
+# React Native Inspect Image
 
 Image inspection modal component for react native.
 
