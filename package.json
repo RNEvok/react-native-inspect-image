@@ -1,0 +1,28 @@
+{
+  "name": "react-native-inspect-image",
+  "version": "1.0.3",
+  "description": "Image inspection modal component for react native",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RNEvok/react-native-inspect-image.git"
+  },
+  "keywords": [
+    "image",
+    "react-native",
+    "inspect-image",
+    "modal-image",
+    "view-image",
+    "view",
+    "inspect"
+  ],
+  "author": "Evok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RNEvok/react-native-inspect-image/issues"
+  },
+  "homepage": "https://github.com/RNEvok/react-native-inspect-image#readme"
+}
