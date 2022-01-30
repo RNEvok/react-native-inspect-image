@@ -2,7 +2,7 @@
 
 Image inspection modal component for react native.
 
-![Gif_1](./gif2.gif)
+![Gif_1](./gif1.gif)
 
 ### Prerequisites
 
