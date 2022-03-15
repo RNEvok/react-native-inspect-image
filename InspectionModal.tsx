@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Modal, View, ImageSourcePropType, Dimensions } from 'react-native';
+import { Modal, View, ImageSourcePropType, Dimensions, TouchableOpacity } from 'react-native';
 import { createStyle } from './InspectionModalStyles';
 import { PinchGestureHandler, PinchGestureHandlerGestureEvent, GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useVector } from 'react-native-redash';
@@ -10,6 +10,7 @@ import Animated, {
   useAnimatedStyle,
   withTiming
 } from 'react-native-reanimated';
+import CloseIcon from './close';
 
 // Global constants
 const { height, width } = Dimensions.get('window');
@@ -23,13 +24,17 @@ export type InspectionModalProps = {
   visible: boolean;
   imgSource: ImageSourcePropType;
   bgColor?: string;
+  closeIconColor?: string;
+  showClose?: boolean;
   onClose: () => void;
 };
 
 const InspectionModal: React.FC<InspectionModalProps> = ({
   visible,
   imgSource,
+  showClose,
   bgColor,
+  closeIconColor,
   onClose
 }) => {
   
@@ -82,6 +87,14 @@ const InspectionModal: React.FC<InspectionModalProps> = ({
       <GestureHandlerRootView style={{flex: 1}}>
         <View style={s?.modalCont}>
           <View style={[s?.main, {backgroundColor: bgColor}]}>
+            {showClose &&
+              <TouchableOpacity 
+                onPress={() => onClose()}
+                style={s?.closeBtn}
+              >
+                <CloseIcon color={closeIconColor}/>
+              </TouchableOpacity>
+            }
             <PinchGestureHandler onGestureEvent={pinchHandler}>
               <Animated.View style={[s?.animatedImgCont]}>
                 <Animated.Image 
@@ -99,7 +112,9 @@ const InspectionModal: React.FC<InspectionModalProps> = ({
 };
 
 InspectionModal.defaultProps={
-  bgColor: '#fff'
+  bgColor: '#fff',
+  closeIconColor: '#000',
+  showClose: true
 }
 
 const MemorizedComponent = memo(InspectionModal);

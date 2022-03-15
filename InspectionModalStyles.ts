@@ -9,7 +9,15 @@ StyleSheet.create({
   },
   main: {
     width: '100%',
-    height: '100%'
+    height: '100%',
+    position: 'relative'
+  },
+  closeBtn: {
+    position: 'absolute',
+    padding: 8,
+    zIndex: 2,
+    right: 8,
+    top: '7%'
   },
   imgModal: {
     width: '100%',

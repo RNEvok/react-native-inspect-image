@@ -64,6 +64,16 @@ bgColor?: string;
 Background color of modal
 
 ```
+showClose?: boolean;
+```
+Display close button
+
+```
+closeIconColor?: string;
+```
+Color of close icon
+
+```
 onClose: () => void;
 ```
 Modal's onRequestClose callback
