@@ -31,7 +31,7 @@ yarn add react-native-inspect-image
 ## Usage example
 
 ```javascript
-import { InspectionModal } from '~/ui/components/InspectionModal';
+import { InspectionModal } from 'react-native-inspect-image';
 
 ...
 const [inspectionModalOpened, setInspectionModalOpened] = useState(false);
