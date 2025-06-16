@@ -32,9 +32,9 @@ export type InspectionModalProps = {
 const InspectionModal: React.FC<InspectionModalProps> = ({
   visible,
   imgSource,
-  showClose,
-  bgColor,
-  closeIconColor,
+  showClose = true,
+  bgColor = '#fff',
+  closeIconColor = '#000',
   onClose
 }) => {
   
@@ -110,12 +110,6 @@ const InspectionModal: React.FC<InspectionModalProps> = ({
   );
   
 };
-
-InspectionModal.defaultProps={
-  bgColor: '#fff',
-  closeIconColor: '#000',
-  showClose: true
-}
 
 const MemorizedComponent = memo(InspectionModal);
 export { MemorizedComponent as InspectionModal };
